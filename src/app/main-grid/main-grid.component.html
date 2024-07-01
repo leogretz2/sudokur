@@ -1,8 +1,9 @@
-<!-- <p>main-grid works!</p> -->
-<table>
-    <tr *ngFor="let row of [0,1,2,3,4,5,6,7,8]">
-        <td *ngFor="let col of [0,1,2,3,4,5,6,7,8]">
-        <input type="text" maxlength="1" [(ngModel)]="sudokuGrid[row][col]">
-        </td>
+  <table>
+    <tr *ngFor="let row of sudokuGrid; let rowIndex = index">
+      <td *ngFor="let col of sudokuGrid[rowIndex]; let colIndex = index">
+        <input type="text" maxlength="1" [(ngModel)]="sudokuGrid[rowIndex][colIndex]" [disabled]="sudokuGrid[rowIndex][colIndex] !== null">
+      </td>
     </tr>
-</table>  
+  </table>
+  
+  

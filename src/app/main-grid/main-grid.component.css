@@ -1,7 +1,8 @@
 table {
     border-collapse: collapse;
     margin: auto;
-  }
+    border: 2px solid black; /* Add a border around the entire table */
+}
   
   td {
     border: 1px solid black;
@@ -15,6 +16,8 @@ table {
     height: 100%;
     text-align: center;
     border: none;
+    /* Needed to create grid */
+    box-sizing: border-box;
   }
   
   input:focus {
