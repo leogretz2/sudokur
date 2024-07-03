@@ -1,0 +1,8 @@
+<table class="board">
+    <tr *ngFor="let row of board; let rowIndex = index">
+      <td *ngFor="let square of row; let colIndex = index">
+        <app-square [value]="square" [rowIndex]="rowIndex" [colIndex]="colIndex" (valueChange)="handleSquareInput({ rowIndex, colIndex, value: $event })"></app-square>
+      </td>
+    </tr>
+  </table>
+  

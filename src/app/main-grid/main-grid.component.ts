@@ -27,7 +27,8 @@ export class MainGridComponent implements OnInit {
       const row: (number|null)[] = [];
       for (let j = 0; j < 9; j++) {
         const value = parseInt(puzzle[i * 9 + j], 10);
-        row.push(isNaN(value) ? null : value);
+        // Accounts for NaN values as well with === 0(?)
+        row.push(value === 0 ? null : value);
       }
       grid.push(row);
     }

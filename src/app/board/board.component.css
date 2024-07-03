@@ -1,0 +1,9 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    border: 5px solid black; /* Thicker border around the entire board */
+    width: 360px; /* Set a fixed width for the board */
+    height: 360px; /* Set a fixed height for the board */
+}
