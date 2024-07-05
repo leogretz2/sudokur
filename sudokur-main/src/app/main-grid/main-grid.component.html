@@ -1,0 +1,37 @@
+  <table>
+    <tr *ngFor="let row of sudokuGrid; let rowIndex = index">
+      <td *ngFor="let col of sudokuGrid[rowIndex]; let colIndex = index">
+        <input
+          type="text"
+          maxlength="1"
+          [(ngModel)]="sudokuGrid[rowIndex][colIndex]"
+          (ngModelChange)="onModelChange($event, rowIndex, colIndex)" 
+          [disabled]="col !== 0 && col !== null">
+      </td>
+      <td *ngFor="let col of sudokuGrid[rowIndex]; let colIndex = index">
+        <input 
+          type="text"
+          maxlength="1"
+          [value]="col===0?'':col"
+          >
+      </td>
+    </tr>
+  </table>
+    
+    <!-- 
+      (input)="onInput2($event, rowIndex, colIndex)"
+  <input
+        value/input
+          id="input-{{rowIndex}}-{{colIndex}}"
+          type="text"
+          maxlength="1"
+          [value]="col === 0 ? '' : col"
+          (input)="onInput($event, rowIndex, colIndex)" 
+          [disabled]="col !== 0 && col !== null"> -->
+  
+          <!-- ngModel
+          <input
+          type="text"
+          maxlength="1"
+          [ngModel]="col===0?'':col"
+          [disabled]="col !== 0 && col !== null">   -->
